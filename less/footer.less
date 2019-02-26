@@ -1,0 +1,78 @@
+// Footer Styles
+.site-footer {
+  width: 100%;
+  max-width: 1430px;
+  .flex(@direction:column;@align:center);
+  bottom: 0;
+  margin: 0 auto;
+  margin-top: 20px;  
+  padding: 5px 0;
+  color: @footerFontColor;
+  background: @footerBgColor;
+
+  & * {
+    margin: 5px 0;
+  }
+
+  .site-footer-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    .flex(@direction:column;@justify:center;@align:center);
+    
+    @media @desktop {
+      .flex(@justify:space-between; @align:center);
+    }
+    
+    .logo-wrapper {
+      .flex(@justify:space-between;@align:baseline);
+      
+      .logo {
+        a {
+          font-family: @logoFont;
+          font-size: @m;
+          letter-spacing: 0.3rem;
+          text-decoration: none;
+          color: @headerFontColor;
+
+          @media @tablet {
+            font-size: @ml;
+          }
+
+          @media @desktop {
+            font-size: @ml;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      font-size: @xs;
+    }
+
+    nav {
+      .flex();
+      a {
+        width: 95%;
+        margin: 0 2.78vw;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: semi-bold;
+        color: @footerFontColor;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @media @desktop {
+          margin: 0 1.39vw;
+        }
+      }
+    }    
+  }
+}
+
+.demo {
+    width: 800px;
+}

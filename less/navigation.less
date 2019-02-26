@@ -1,0 +1,204 @@
+// Navigation code here
+.site-header {
+  width: 100%;
+  margin: 0 auto;
+  .flex(@direction:column;@justify:center;@align:center);
+  color: @headerFontColor;
+  background: @headerBgColor;
+  top: 0;
+  position: sticky;
+  z-index: 10;
+
+  @media @desktop {
+    max-width: 1430px;
+  }
+  
+  .site-header-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    .flex(@direction:column;@justify:center);
+
+    @media @tablet {
+      .flex(@justify:space-between;@align:center);
+    }
+
+    @media @desktop {
+      .flex(@justify:space-between;@align:center);
+    }
+
+    .logo {
+      width: 100%;
+      padding: 10px 0;
+      .flex(@justify:space-between;@align:center);
+
+      @media @tablet {
+        width: auto;
+      }
+
+      a {
+        font-family: @logoFont;
+        font-size: @ml;
+        letter-spacing: 0.3rem;
+        text-decoration: none;
+        color: @headerFontColor;
+        
+        @media @tablet {
+          font-size: @l;
+        }
+
+        @media @desktop {
+          font-size: @xl;
+        }
+      }
+
+    }
+
+    .mainNav {
+      .flex(@direction:column;@justify:center;@align:center);
+      display: none;
+      
+      @media @tablet {
+        .flex(@justify:space-evenly; @align:baseline);
+        margin-bottom: 10px;
+      }
+
+      a {
+        width: 100%;
+        margin: 0 2.78vw;
+        padding: 20px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: @s;
+        font-weight: 600;
+        line-height: 2.6rem;
+        letter-spacing: 0.2rem;
+        color: @headerFontColor;
+        white-space: nowrap;
+        border-bottom: 1px solid @primaryDark;
+
+        @media @tablet {
+          width: auto;
+          margin: 0 1.39vw;
+          padding: 12px;
+          border-bottom: initial;
+        }
+
+        &:hover {
+          color: @headerBgColor;
+          background: @headerFontColor;
+        }
+
+        &:first-child {
+          border-top: 1px solid @primaryDark;
+          @media @tablet {
+            border: none;
+          }
+        }
+
+        &:last-child {
+          color: @headerFontColor;
+          background: @accent;
+          border-radius: 3px;
+          margin-bottom: 0;
+          font-size: @sm;
+
+          &:hover {
+            color: @accent;
+            background: @headerFontColor;
+          }
+        }
+
+      }
+    }
+
+    #openMenu {
+      font-size: @ml;
+
+      @media @tablet {
+        display: none;
+      }
+    }
+
+    #closeMenu {
+      font-size: @ml;
+      display: none;
+    }
+  }
+
+
+}
+
+nav {
+  padding: 10px 0;
+  padding-bottom: 0;
+  background: @headerBgColor;
+
+  .nav-link {
+    margin: 0 2.78vw;
+    text-decoration: none;
+    font-size: @s;
+    font-weight: semi-bold;
+    letter-spacing: 0.12rem;
+    color: @headerFontColor;
+    white-space: nowrap;
+
+    @media @tablet {
+      margin: 0 1.39vw;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*******DEMO VERSION*****/
+.demo {
+  max-width: 500px;
+
+  @media @tablet {
+    max-width: 800px;
+  }
+
+  @media @desktop {
+    max-width: 1430px;
+  }
+
+}
+
+.demo2 {
+ max-width: 500px;
+  background: @primaryBgShading;
+
+  @media @tablet {
+    max-width: 800px;
+  }
+
+  @media @desktop {
+    max-width: 1430px;
+  }
+
+  .logo {
+    a {
+      color: @emphasis;
+    }
+
+  }
+
+  nav {
+    background: @primaryBgShading;
+
+    a {
+      color: @emphasis;
+
+      &:last-child {
+        color: @headerFontColor;
+        background: @accent;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+
+

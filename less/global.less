@@ -1,0 +1,134 @@
+// General Styles
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body * {
+  font-family: @defaultFont;
+}
+
+body {
+  background: @primaryBgShading;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: @headingFont;
+  color: @headingColor;
+}
+
+h1 {
+  font-size: @ml;
+  font-weight: bold;
+  
+  @media @tablet {
+    font-size: @l;
+  }
+}
+
+h2 {
+  font-size: @m;
+  font-weight: bold;
+
+  @media @desktop {
+    font-size: @ml;
+  }
+}
+
+h3 {
+  font-size: @s;
+  font-weight: bold;
+
+  @media @desktop {
+    font-size: @m;
+  }
+}
+
+h4 {
+  font-size: @xs;
+  font-weight: bold;
+
+  @media @desktop {
+    font-size: @sm;
+  }
+}
+
+p {
+  font-size: @xs;
+  line-height: 1.4;
+
+  @media @desktop {
+    font-size: @s;
+  }
+}
+
+ul, ol {
+  margin: 0 2rem;
+
+  li {
+    font-size: @xs;
+    line-height: 1.4;
+
+    @media @desktop {
+      font-size: @s;
+    }
+  }
+}
+
+ul {
+  list-style-type: initial;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+a {
+  text-decoration: none;
+  font-size: @xs;
+  font-weight: 600;
+  color: @defaultLinkColor;
+
+  @media @desktop {
+    font-size: @s;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  .buttonColor(@fontColor:@lightText,@bgColor:@primaryColor);
+  .buttonSize(@width:100px; @height:auto;@fontSize:@xs);
+  .buttonShape(@bRadius:15px; @paddingHeight:5px; @paddingWidth:5px);  
+  .buttonStyle(@textAlign:center;@decor:none;@cursor:pointer);
+
+  @media @desktop {
+    .buttonSize(@width:100px; @height:auto;@fontSize:@s);
+  }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media @desktop {
+      max-width: 1430px;
+    }
+}
+
+.btn-cta {
+  .buttonColor(@fontColor:@lightText;@bgColor:@accent);
+  .buttonStyle(@fontWeight:900);
+  .hoverEffect(@fontColor:@lightText;@bgColor:@accent);
+}
+

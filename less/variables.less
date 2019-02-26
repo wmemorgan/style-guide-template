@@ -1,0 +1,45 @@
+// Typography
+@logoFont: 'Dancing Script', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+@headingFont: Roboto, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+@defaultFont: 'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+
+// Font Sizing
+@xxs: 1rem;
+@xs: 1.3rem; // base size for mobile view
+@s: 1.6rem; // base size for text
+@sm: 1.8rem; // base size for menu and button text
+@m: 2rem; // base heading/sub-heading size
+@ml: 3rem; // base headline size
+@l: 4rem; // for big emphasis
+@xl: 5rem; // ultra large
+@xxl: 6rem; // site banner headline
+
+//Color Palette
+@primaryColor: #1363A8;
+@primaryDark: #0F5080;
+@primaryBgShading: #F5F8FA;
+@secondaryColor: #4195D2;
+@secondaryBgShading: #7F969F;
+@accent: #ED5D28;
+@emphasis: #03100D;
+@darkText: #595959;
+@lightText: #FFFFFF;
+
+// Color Scheme
+@logoColor: @lightText;
+@headerBgColor: @primaryColor;
+@headerFontColor: @lightText; 
+@footerBgColor: @headerBgColor;
+@footerFontColor: @headerFontColor;
+@headingColor: @darkText;
+@defaultFontColor: @darkText;
+@defaultButtonColor: .buttonColor(@lightText, @secondaryColor);
+@ctaButtonColor: .buttonColor(@lightText, @accent);
+@defaultLinkColor: @secondaryColor;
+@containerBgColor: @primaryBgShading;
+@cardBgColor: @secondaryBgShading;
+
+// Media breakpoints
+@phone: ~"(max-width: 500px)";
+@tablet: ~"(min-width: 768px)";
+@desktop: ~"(min-width: 801px)";

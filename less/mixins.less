@@ -1,0 +1,70 @@
+// Mixins Here
+.flex(@direction: row; @justify: normal; @align: normal ) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.headerFontStyle(@fontSize) {
+  font-family: 'Russo One', sans-serif;
+  color: @header-font-color;
+  font-size: @fontSize;
+}
+
+.center() {
+  .flex(@justify: center; @align: center );
+}
+
+.size(@width:auto; @height:auto) {
+}
+
+.buttonColor(@fontColor,@bgColor) {
+  color: @fontColor;
+  background: @bgColor;
+  border: 1px solid @bgColor;
+}
+
+.buttonSize(@width:auto; @height:auto;@fontSize: 1rem;) {
+  width: @width;
+  height: @height;
+  font-size: @fontSize;
+}
+
+.buttonShape(@bRadius; @paddingHeight; @paddingWidth;) {
+  padding: @paddingHeight @paddingWidth;
+  border-radius: @bRadius;
+}
+
+.buttonStyle(@fontWeight:600;@textAlign:center;@decor:none;@textCase:normal;@cursor:pointer) {
+  font-weight: @fontWeight;
+  text-align: @textAlign;
+  text-decoration: @decor;
+  text-transform: @textCase;
+  letter-spacing: 0.13rem;
+  cursor: @cursor;
+  border: none;
+  transition: .2s;
+}
+
+.buttonIcon(@color;@bgColor) {
+  .buttonColor(@fontColor:@color,@bgColor:@bgColor);
+  .buttonSize(@width:auto; @height:auto;@fontSize: 1rem;);
+  .buttonShape(@bRadius; @paddingHeight; @paddingWidth;);  
+  .buttonStyle(@textAlign:center;@decor:none;@cursor:pointer);
+}
+
+//Animations
+//Version 1
+.hoverEffect(@fontColor; @bgColor) {
+  &:hover {
+    color: @bgColor;
+    background: @fontColor;
+    border: 1px solid @bgColor;
+  }
+}  
+// .hoverEffect(@bgColor) {
+//   &:hover {
+//     background: lighten(@bgColor, 10%);
+//   }
+// }

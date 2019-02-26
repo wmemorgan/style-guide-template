@@ -1,0 +1,118 @@
+.hidden {
+  display: none;
+
+  & * {
+    display: none;
+  }
+}
+
+.carousel {
+  /* Size and position settings */
+  width: 90%;
+  max-width: 1000px;
+  height: 450px;
+  .flex(@direction:column;@justify:center;@align:center);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: @lightText; 
+
+  /* Tablet and Desktop View */
+  @media @tablet {
+    height: 650px;
+  }
+
+  @media @desktop {
+    height: 400px;
+  }
+
+  .left-button, .right-button {
+    .flex(@justify:center;@align:center);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 5;
+    font-size: 3rem;
+    font-weight: bold;
+    color: @secondaryBgShading;
+    background: @lightText;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 
+  0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    border-radius: 50%;
+    opacity: 0.6;
+    cursor: pointer;
+
+    @media @desktop {
+      font-size: 4rem;
+      width: 50px;
+      height: 50px;
+
+    }
+    &:hover {
+      color: @lightText;
+      background-color: @secondaryColor;
+    }
+  }
+  .left-button {
+    bottom: 0; 
+    left: 5%;
+    transform: translate(0, -50%);
+
+    @media @desktop {
+      bottom: 50%;
+      left: 0;
+    }
+  }
+  .right-button {
+    bottom: 0; 
+    right: 5%;
+    transform: translate(0, -50%);
+
+    @media @desktop {
+      bottom: 50%;
+      right: 0;
+    }
+
+  }
+
+  .slide-indicator-wrapper {
+    .flex(@direction:column;@align:center);
+
+    .slide-indicator {
+      .flex(@direction:row;@justify:space-evenly;@align:center);
+      
+      div {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 1rem;
+        background: @secondaryBgShading;
+        border-radius: 50%;
+        
+        @media @desktop {
+          width: 2rem;
+          height: 2rem;
+          margin: 0 2rem;
+        } //@media @tablet, @destkop
+      } //div
+    } //.slide-indicator
+
+  }
+
+  /* Target content */
+  // img {
+  //   width: 100%;
+  //   display: none;
+  //   position: absolute;
+  //   animation: slideLeft 0.5s forwards;  
+  // }
+
+  /* Animation */
+  // @keyframes slideLeft {
+  //   100% { left: 0; }
+  // }
+
+  // @keyframes slideRight {
+  //   100% { right: 0; }
+  // }
+
+}
