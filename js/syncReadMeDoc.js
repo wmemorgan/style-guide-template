@@ -1,5 +1,5 @@
 
-let url = "http://wilfredmorgan.com/style-guide-template/README.md"
+let url = "https://wilfredmorgan.com/style-guide-template/README.md"
 
 async function getData(url) {
   let downloadData = await fetch(url)
