@@ -8,4 +8,5 @@ The style guide serves as a design and development tool that brings cohesion to 
 
 ## Tools
 [Design Selection Tool](design-demo.html)
+
 Demo different color palette and typography options on a mockup page.
